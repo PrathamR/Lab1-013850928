@@ -1,4 +1,4 @@
-var router = require('express').Router();
+const router = require('express').Router();
 
 router.post('/signup', (req, res) => {
     console.log("Signing-up owner")

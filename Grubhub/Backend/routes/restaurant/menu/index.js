@@ -1,4 +1,4 @@
-var router = require('express').Router();
+const router = require('express').Router();
 
 router.get('/sections', (req, res) => {
     console.log("All sections and items available in restaurant")

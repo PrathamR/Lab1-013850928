@@ -1,4 +1,4 @@
-var router = require('express').Router();
+const router = require('express').Router();
   
   router.get('/past', (req, res) => {
     console.log("Get this user's past orders")
