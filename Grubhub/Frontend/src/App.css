@@ -1,6 +1,6 @@
 
 .form-heading { color:#fff; font-size:23px;}
-.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel h2{ color:#797474; font-size:18px; margin:0 0 8px 0;}
 .panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
 .login-form .form-control {
   background: #f7f7f7 none repeat scroll 0 0;
@@ -29,8 +29,8 @@
   text-decoration: underline;
 }
 .login-form  .btn.btn-primary {
-  background: #f0ad4e none repeat scroll 0 0;
-  border-color: #f0ad4e;
+  background: #1d05f0 none repeat scroll 0 0;
+  border-color: #1d05f0;
   color: #ffffff;
   font-size: 14px;
   width: 100%;
@@ -47,4 +47,4 @@
   margin: auto;
 }
 .back { text-align: left; margin-top:10px;}
-.back a {color: #444444; font-size: 13px;text-decoration: none;}
+.back a {color: #a5a1a1; font-size: 13px;text-decoration: none;}
