@@ -5,6 +5,7 @@ import Home from './Home/Home';
 import Delete from './Delete/Delete';
 import Create from './Create/Create';
 import Navbar from './LandingPage/Navbar';
+import Register from './Register/Register';
 class Main extends Component {
     render(){
         return(
@@ -14,7 +15,7 @@ class Main extends Component {
                 <Route path="/login" component={Login}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/delete" component={Delete}/>
-                <Route path="/create-account" component={Create}/>
+                <Route path="/create-account" component={Register}/>
             </div>
         )
     }

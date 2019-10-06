@@ -42,7 +42,8 @@ class Home extends Component {
         return(
             <div>
                 {redirectVar}
-                <div class="container">
+                Show a picture and a Search textbox
+{/*                 <div class="container">
                     <h2>List of All Books</h2>
                         <table class="table">
                             <thead>
@@ -53,12 +54,12 @@ class Home extends Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                {/*Display the Tbale row based on data recieved*/}
+                                {/*Display the Tbale row based on data recieved}
                                 {details}
                             </tbody>
                         </table>
-                </div> 
-            </div> 
+                </div> */}
+            </div>  
         )
     }
 }

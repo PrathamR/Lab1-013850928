@@ -20,7 +20,8 @@ class Navbar extends Component {
             console.log("Able to read cookie");
             navLogin = (
                 <ul class="nav navbar-nav navbar-right">
-                        <li><Link to="/" onClick = {this.handleLogout}><span class="glyphicon glyphicon-user"></span>Logout</Link></li>
+                    <li><Link to="/profile"><span class="glyphicon glyphicon-user"></span> My Profile</Link></li>
+                    <li><Link to="/" onClick = {this.handleLogout}><span class="glyphicon glyphicon-log-in"></span>Logout</Link></li>
                 </ul>
             );
         }else{
@@ -28,27 +29,27 @@ class Navbar extends Component {
             console.log("Not Able to read cookie");
             navLogin = (
                 <ul class="nav navbar-nav navbar-right">
-                        <li><Link to="/login"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
+                    <li><Link to="/login"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
                 </ul>
             )
         }
         let redirectVar = null;
-        if(cookie.load('cookie')){
+        /* if(cookie.load('cookie')){
             redirectVar = <Redirect to="/home"/>
-        }
+        } */
         return(
             <div>
                 {redirectVar}
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Book Store App</a>
+                        <a class="navbar-brand" href="#">GRUBHUB</a>
                     </div>
-                    <ul class="nav navbar-nav">
+{/*                     <ul class="nav navbar-nav">
                         <li class="active"><Link to="/home">Home</Link></li>
                         <li><Link to="/create">Add a Book</Link></li>
                         <li><Link to="/delete">Delete a Book</Link></li>
-                    </ul>
+                    </ul> */}
                     {navLogin}
                 </div>
             </nav>

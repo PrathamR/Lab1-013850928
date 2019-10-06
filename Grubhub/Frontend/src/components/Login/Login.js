@@ -14,14 +14,14 @@ class Login extends Component{
         super(props);
         //maintain the state required for this component
         this.state = {
-            username : "",
+            email : "",
             password : "",
             authFlag : false,
             loginErr : false
         }
         //Bind the handlers to this class
-        this.usernameChangeHandler = this.usernameChangeHandler.bind(this);
-        this.passwordChangeHandler = this.passwordChangeHandler.bind(this);
+        this.emailChangeHandler = this.emailChangeHandler.bind(this);
+        this.emailChangeHandler = this.emailChangeHandler.bind(this);
         this.submitLogin = this.submitLogin.bind(this);
     }
     //Call the Will Mount to set the auth Flag to false
@@ -32,10 +32,10 @@ class Login extends Component{
         })
     }
 
-    //username change handler to update state variable with the text entered by the user
-    usernameChangeHandler = (e) => {
+    //email change handler to update state variable with the text entered by the user
+    emailChangeHandler = (e) => {
         this.setState({
-            username : e.target.value
+            email : e.target.value
         })
     }
     //password change handler to update state variable with the text entered by the user
@@ -51,13 +51,13 @@ class Login extends Component{
         //prevent page from refresh
         //e.preventDefault();
         const data = {
-            username : this.state.username,
+            email : this.state.email,
             password : this.state.password
         }
         //set the with credentials to true
         axios.defaults.withCredentials = true;
         //make a post request with the user data
-        axios.post('http://localhost:3001/login',data)
+        axios.post('http://localhost:3003/users/login',data)
             .then(response => {
                 console.log("Status Code : ",response.status);
                 if(response.status === 200){
@@ -97,7 +97,7 @@ class Login extends Component{
         if(cookie.load('cookie')){
             redirectVar = <Redirect to= "/home"/>
         } else if (this.state.loginErr === true) {
-            errorMsg = <p> Incorrect username / password </p>
+            errorMsg = <p> Hey Stranger! We don't recognize that login. Spell check your info and try again! </p>
         }
         return(
             <div>
@@ -107,13 +107,13 @@ class Login extends Component{
                 <div class="login-form">
                     <div class="main-div">
                         <div class="panel">
-                            <h2>Admin Login</h2>
-                            {errorMsg}
-                            <p>Please enter your username and password</p>
+                        {errorMsg}
+                            <h2>Sign in with your Grubhub account</h2>
+                            
                         </div>
                         
                             <div class="form-group">
-                                <input onChange = {this.usernameChangeHandler} type="text" class="form-control" name="username" placeholder="Username"/>
+                                <input onChange = {this.emailChangeHandler} type="text" class="form-control" name="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
                                 <input onChange = {this.passwordChangeHandler} type="password" class="form-control" name="password" placeholder="Password"/>
