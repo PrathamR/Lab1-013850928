@@ -75,7 +75,25 @@ router.post('/logout', (req, res) => {
 });
   
 router.get('/profile', (req, res) => {
-    console.log("Get user's profile")
+    console.log("Get user's profile ", req.query.email);
+
+    const queryString = `SELECT * FROM Users WHERE email = ?`;
+
+    getConnection().query(queryString, [req.query.email], (err, results, fields) => {
+        if(err) {
+            console.log(`Failed to login user ${err}`);
+            res.sendStatus(500);
+            return;
+        }
+
+        console.log(`Profile of user - ${results}`);
+        res.cookie('cookie',"admin",{maxAge: 900000, httpOnly: false, path : '/'});
+        res.writeHead(200,{
+            'Content-Type' : 'text/plain'
+        });
+        res.end(JSON.stringify(results));
+    });
+
 });
   
 router.post('/profile', (req, res) => {

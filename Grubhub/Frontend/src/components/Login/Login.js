@@ -96,6 +96,8 @@ class Login extends Component{
 
         if(cookie.load('cookie')){
             redirectVar = <Redirect to= "/home"/>
+            localStorage.setItem('email', this.state.email);
+            console.log("Saving email to localstorage");
         } else if (this.state.loginErr === true) {
             errorMsg = <p> Hey Stranger! We don't recognize that login. Spell check your info and try again! </p>
         }

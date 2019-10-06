@@ -4,6 +4,7 @@ import Login from './Login/Login';
 import Home from './Home/Home';
 import Delete from './Delete/Delete';
 import Create from './Create/Create';
+import Profile from './Profile/Profile';
 import Navbar from './LandingPage/Navbar';
 import Register from './Register/Register';
 class Main extends Component {
@@ -16,6 +17,7 @@ class Main extends Component {
                 <Route path="/home" component={Home}/>
                 <Route path="/delete" component={Delete}/>
                 <Route path="/create-account" component={Register}/>
+                <Route path="/profile" component={Profile}/>
             </div>
         )
     }
