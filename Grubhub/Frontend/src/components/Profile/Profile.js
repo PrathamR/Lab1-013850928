@@ -130,7 +130,7 @@ class Profile extends Component {
                 <div class="login-form">
                     <div class="main-div">
                         <div class="panel">
-                            
+                        {this.state.user.first_name}'s Profile
                         </div>
                         
                         <div class="form-group"> First Name

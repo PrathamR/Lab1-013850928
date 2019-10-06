@@ -95,7 +95,7 @@ class Login extends Component{
         let errorMsg = null;
 
         if(cookie.load('cookie')){
-            redirectVar = <Redirect to= "/home"/>
+            redirectVar = <Redirect to= "/search"/>
             localStorage.setItem('email', this.state.email);
             console.log("Saving email to localstorage");
         } else if (this.state.loginErr === true) {
