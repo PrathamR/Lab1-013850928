@@ -5,15 +5,13 @@ const router = express.Router();
 
 // mount our 'products' router onto the API router
 // api/products/
-router.use('/products', require('./products')); 
 
-// let's mount a few more...
-router.use('/search', require('./search'));  
-router.use('/cart', require('./cart'));  
-router.use('/userCreation', require('./userCreation'));  
-router.use('/checkout', require('./checkout'));  
-router.use('/promo', require('./promo'));  
-router.use('/account', ensureAuthenticated, require('./account'));  
-router.use('/admin', ensureAuthenticated, require('./admin'));
+router.use('/users', require('./users'));    // Singup, login, logout, profile
+router.use('/search', require('./search'));  // Search items and restaurants
+router.use('/orders', require('./orders'));      // Get past and upcoming
+router.use('/restaurant', require('./restaurant'));  // Signup, login, logout, profile, other options
+router.use('/checkout', require('./checkout'));    // Place new order
+
+//router.use('/admin', ensureAuthenticated, require('./admin'));
 
 module.exports = router;  
