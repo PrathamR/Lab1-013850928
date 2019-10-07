@@ -5,6 +5,7 @@ import Home from './Home/Home';
 import Delete from './Delete/Delete';
 import Create from './Create/Create';
 import Profile from './Profile/Profile';
+import RestProfile from './Profile/RestProfile';
 import Navbar from './LandingPage/Navbar';
 import Register from './Register/Register';
 import Search from './Search/Search';
@@ -38,6 +39,8 @@ class Main extends Component {
                 <Route path="/create-menu" component={CreateMenu}/>
                 <Route path="/create-items" component={CreateItems}/>
                 <Route path="/cart" component={Cart}/>
+                <Route path="/profile-restaurant" component={RestProfile}/>
+                
             </div>
         )
     }
