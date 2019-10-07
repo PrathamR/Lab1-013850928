@@ -5,4 +5,4 @@ This repository contains frontend and backend source code for two projects -
 Prototype application of the food-delivery service
 
 ## Calculator
-Simple client-server calculator using ReactJS and NodeJS
+Simple client-server calculator using ReactJS Frontend and Express Backend
