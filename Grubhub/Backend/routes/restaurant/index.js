@@ -55,7 +55,6 @@ router.post('/logout', (req, res) => {
   
 router.get('/profile', (req, res) => {
     console.log("Get owner's profile")
-    console.log("Get user's profile ", req.query.email);
 
     const queryString = `SELECT * FROM Restaurants WHERE email = ?`;
 
@@ -99,7 +98,7 @@ router.post('/profile', (req, res) => {
         });
         res.end("Successful SignUp");
     });
-    
+
 });
 
 router.get('/restaurant/getOrders', (req, res) => {
